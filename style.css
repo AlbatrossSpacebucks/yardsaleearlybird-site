@@ -18,3 +18,25 @@
 @media(max-width:1000px){.badge-gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 18px}}@media(max-width:600px){.badge-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 18px}.badge-gallery img{width:96px;height:96px}.badge-gallery .badge-master img{width:120px;height:120px}}
 
 .tools-note{margin:18px 0 0;font-size:.875rem;line-height:1.5;color:var(--muted);text-align:center;max-width:none}
+
+/* Badge slider */
+.badge-slider{margin-top:46px}
+.bs-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+.bs-head h3{font:800 1.75rem/1.15 var(--display);margin:0 0 6px;color:#2A1B11}
+.bs-lead{margin:0 0 6px;color:#6D5D4F;font-size:1.0625rem;max-width:720px}
+.bs-arrows{display:none;gap:8px;flex-shrink:0;margin-bottom:6px}
+.bs-arrow{width:44px;height:44px;border-radius:50%;border:1px solid #D9D0C1;background:#FFFFFF;color:#B5532F;font-size:22px;line-height:1;cursor:pointer}
+.bs-arrow:disabled{opacity:.35;cursor:default}
+.bs-arrow:focus-visible,.bs-shelf:focus-visible{outline:3px solid #B5532F;outline-offset:3px}
+@media(min-width:760px){.bs-arrows{display:flex}}
+.bs-shelf{list-style:none;margin:0 -4px;display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:12px;padding:16px 12px 20px;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+.bs-shelf::-webkit-scrollbar{display:none}
+.bs-badge{flex:0 0 140px;scroll-snap-align:start;text-align:center;display:flex;flex-direction:column;align-items:center}
+.bs-badge img,.bs-mystery{width:120px;height:120px;border-radius:50%;display:block}
+.bs-master img{box-shadow:0 0 0 4px #F3E9D7,0 0 0 8px #F7C51E}
+.bs-mystery{display:grid;place-items:center;background:#2A2420;border:5px solid #1F1B16;box-sizing:border-box;color:#F7C51E;font:800 46px/1 var(--display)}
+.bs-name{margin-top:12px;font:700 15px/1.2 var(--body);color:#2A1B11}
+.bs-how{margin-top:3px;font:400 13px/1.25 var(--body);color:#6D5D4F}
+.bs-more{flex:0 0 220px;scroll-snap-align:start;align-self:center;background:#FFFFFF;border-radius:18px;padding:20px;font:800 18px/1.25 var(--display);color:#2A1B11;box-shadow:0 8px 24px rgba(118,72,23,.08);margin-right:12px}
+.bs-more span{display:block;margin-top:8px;font:500 14px/1.35 var(--body);color:#6D5D4F}
+@media(prefers-reduced-motion:reduce){.bs-shelf{scroll-behavior:auto}}
